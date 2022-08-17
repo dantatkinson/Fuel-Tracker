@@ -33211,7 +33211,8 @@ var App = /*#__PURE__*/function (_Component) {
         type: "text",
         placeholder: "Enter amount of fuel..."
       }), /*#__PURE__*/_react.default.createElement("button", {
-        type: "submit"
+        type: "submit",
+        class: "submitButton"
       }, "Submit"));
     }
   }]);
