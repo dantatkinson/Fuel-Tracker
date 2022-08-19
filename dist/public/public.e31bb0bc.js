@@ -33207,13 +33207,7 @@ var App = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", {
         className: "App"
-      }, /*#__PURE__*/_react.default.createElement("h1", null, "Fuel Tracker"), /*#__PURE__*/_react.default.createElement("input", {
-        type: "text",
-        placeholder: "Enter amount of fuel..."
-      }), /*#__PURE__*/_react.default.createElement("button", {
-        type: "submit",
-        class: "submitButton"
-      }, "Submit"));
+      }, /*#__PURE__*/_react.default.createElement("h1", null, "Fuel Tracker"));
     }
   }]);
 
@@ -33264,7 +33258,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34455" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50177" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
