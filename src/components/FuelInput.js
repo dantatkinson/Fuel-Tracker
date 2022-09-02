@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function FuelInput() {
-  const [amount, setAmount] = useState("");
-  const [amountSubmitted, setAmountSubmitted]     = useState("");
+  const [amount, setAmount] = useState('');
+  const [amountSubmitted, setAmountSubmitted] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setAmount('');
 
     // alert(`The name you entered was: ${amount}`);
-  }
+  };
 
   // const displayAmount() => {
   //   amountSubmitted = event.target.value;

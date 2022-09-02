@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import { Route, Routes, Link } from 'react-router-dom';
 import myfuel from '../assets/myfuel.png';
 import './App.scss';
-import { Route, Routes, Link } from 'react-router-dom';
 import FuelInput from './FuelInput';
 import LogIn from './LogIn';
 import SignUp from './SignUp';
