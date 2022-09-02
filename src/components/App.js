@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
-import myfuel from '../assets/myfuel.png';
 import './App.scss';
+import myfuel from '../assets/myfuel.png';
 import FuelInput from './FuelInput';
-import LogIn from './LogIn';
-import SignUp from './SignUp';
+import LogIn from './LogIn/LogIn';
+import SignUp from './SignUp/SignUp';
 import Home from './Home';
 
 function App() {
   const [token, setToken] = useState();
 
-  // if(!token) {
-  //   return <LogIn setToken={setToken} />
-  // }
+  if (!token) {
+    return <LogIn setToken={setToken} />;
+  }
 
   return (
     <div className="wrapper">
