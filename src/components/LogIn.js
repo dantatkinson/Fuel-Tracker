@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 export default function LogIn() {
     return (
         <div className="login-wrapper">
-            <h1>Please Log In</h1>
+            <h1>Please Log Inn</h1>
             <form>
                 <label>
                     <p>Email Address</p>
