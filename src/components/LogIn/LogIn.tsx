@@ -1,27 +1,33 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import myfuel from '../../assets/myfuel.png';
 import './LogIn.scss';
 
-async function loginUser(credentials) {
+type loginUserProps = {
+  credentials: object;
+}
+
+async function loginUser({ credentials }: loginUserProps): Promise<any> {
   return fetch('http://localhost:8080/log-in', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(credentials)
+    body: JSON.stringify(credentials),
   })
-    .then(data => data.json())
+    .then((data) => data.json());
 }
 
 export default function LogIn({ setToken }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const token = await loginUser({
       email,
-      password
+      password,
     });
     setToken(token);
     setEmail('');
@@ -30,7 +36,13 @@ export default function LogIn({ setToken }) {
 
   return (
     <div className="login-wrapper">
-      <h1>Please Log In</h1>
+      <header>
+        <img src={myfuel} className="logo" alt="MyFuel" />
+      </header>
+      <nav className="nav">
+        <Link to="/sign-up" className="nav-link">Sign Up</Link>
+      </nav>
+      <h2>Please Log In</h2>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Email Address</p>
@@ -48,6 +60,6 @@ export default function LogIn({ setToken }) {
   );
 }
 
-LogIn.PropTypes = {
-  setToken: PropTypes.func.isRequired
-}
+LogIn.propTypes = {
+  setToken: propTypes.func.isRequired,
+};
