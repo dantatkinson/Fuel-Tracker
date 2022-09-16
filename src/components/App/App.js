@@ -3,7 +3,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import myfuel from '../../assets/myfuel.png';
 import FuelInput from '../FuelInput';
 import Home from '../Home';
-import AuthenticationButton from '../authentication-button';
+import AuthenticationButton from '../buttons/authentication-button';
 
 import './App.scss';
 
