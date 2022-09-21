@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default function Home({ isAuthenticated }) {
+export default function Home({ isAuthenticated, user }) {
   return (
-    <h3>Welcome to MyFuel</h3>
+    <h3>Welcome {isAuthenticated ? user.name : 'to MyFuel'}</h3>
   );
 }
