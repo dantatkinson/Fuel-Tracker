@@ -19,13 +19,13 @@ export default function App() {
       </header>
       <nav className="nav">
         <Link to="/" className="nav-link">Home</Link>
-        {isAuthenticated && <Link to="fill-up" className="nav-link">Fuel</Link>}
+        {isAuthenticated && <Link to="fuel" className="nav-link">Fuel</Link>}
         <AuthenticationButton isAuthenticated={isAuthenticated} />
       </nav>
       <br></br>
       <Routes>
         <Route path="/" element={<Home isAuthenticated={isAuthenticated} user={user} />}/>
-        <Route path="fill-up" element={<FuelInput />}/>
+        <Route path="fuel" element={<FuelInput />}/>
       </Routes>
     </div>
   );
