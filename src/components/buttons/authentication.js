@@ -1,7 +1,7 @@
 import React from 'react';
-import LoginButton from './login';
-import LogoutButton from './logout';
+import Login from './Login';
+import Logout from './Logout';
 
-export default function AuthenticationButton({ isAuthenticated }) {
-  return isAuthenticated ? <LogoutButton /> : <LoginButton />;
+export default function Authentication({ isAuthenticated }) {
+  return isAuthenticated ? <Logout /> : <Login />;
 }

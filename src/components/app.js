@@ -2,9 +2,9 @@ import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 
-import FuelInput from './fuel-input';
-import Home from './home';
-import AuthenticationButton from './buttons/authentication';
+import FuelInput from './FuelInput';
+import Home from './Home';
+import Authentication from './buttons/Authentication';
 
 import '../sass/main.scss';
 import myfuel from '../assets/myfuel.png';
@@ -20,7 +20,7 @@ export default function App() {
       <nav className="nav">
         <Link to="/" className="nav-link">Home</Link>
         {isAuthenticated && <Link to="fuel" className="nav-link">Fuel</Link>}
-        <AuthenticationButton isAuthenticated={isAuthenticated} />
+        <Authentication isAuthenticated={isAuthenticated} />
       </nav>
       <br></br>
       <Routes>
